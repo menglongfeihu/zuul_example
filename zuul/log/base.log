@@ -1,0 +1,90 @@
+2016-10-10 16:49:06,837 INFO (Application.java:35)- =======开始启动Spring boot=======
+2016-10-10 16:49:07,495 INFO (StartupInfoLogger.java:48)- Starting Application on anzengli-hp820 with PID 1988 (F:\workspace-learn\zuul\target\classes started by anzengli in F:\workspace-learn\zuul)
+2016-10-10 16:49:07,804 INFO (AbstractApplicationContext.java:514)- Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@472ae739: startup date [Mon Oct 10 16:49:07 CST 2016]; root of context hierarchy
+2016-10-10 16:49:07,998 INFO (AutowiredAnnotationBeanPostProcessor.java:153)- JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-10-10 16:49:08,045 INFO (Version.java:27)- HV000001: Hibernate Validator 5.1.3.Final
+2016-10-10 16:49:08,227 INFO (PostProcessorRegistrationDelegate.java:309)- Bean 'encrypt.CONFIGURATION_PROPERTIES' of type [class org.springframework.cloud.bootstrap.encrypt.KeyProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-10 16:49:08,228 INFO (PostProcessorRegistrationDelegate.java:309)- Bean 'encryptionBootstrapConfiguration' of type [class org.springframework.cloud.bootstrap.encrypt.EncryptionBootstrapConfiguration$$EnhancerBySpringCGLIB$$ee3619aa] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-10 16:49:08,303 INFO (StartupInfoLogger.java:57)- Started Application in 1.141 seconds (JVM running for 1.969)
+2016-10-10 16:49:08,431 INFO (AbstractApplicationContext.java:514)- Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@59dd7c4b: startup date [Mon Oct 10 16:49:08 CST 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@472ae739
+2016-10-10 16:49:09,710 INFO (DefaultListableBeanFactory.java:822)- Overriding bean definition for bean 'beanNameViewResolver': replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/ErrorMvcAutoConfiguration$WhitelabelErrorViewConfiguration.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter; factoryMethodName=beanNameViewResolver; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+2016-10-10 16:49:10,178 INFO (GenericScope.java:230)- BeanFactory id=40b394b5-d341-3bfd-82b8-7cf5769c1934
+2016-10-10 16:49:10,193 INFO (AutowiredAnnotationBeanPostProcessor.java:153)- JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-10-10 16:49:10,335 INFO (PostProcessorRegistrationDelegate.java:309)- Bean 'org.springframework.cloud.autoconfigure.RefreshAutoConfiguration$ConfigurationPropertiesRebinderConfiguration' of type [class org.springframework.cloud.autoconfigure.RefreshAutoConfiguration$ConfigurationPropertiesRebinderConfiguration$$EnhancerBySpringCGLIB$$1e6cdc87] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2016-10-10 16:49:10,811 INFO (TomcatEmbeddedServletContainer.java:80)- Tomcat initialized with port(s): 8080 (http)
+2016-10-10 16:49:11,107 INFO (DirectJDKLog.java:180)- Starting service Tomcat
+2016-10-10 16:49:11,109 INFO (DirectJDKLog.java:180)- Starting Servlet Engine: Apache Tomcat/8.0.30
+2016-10-10 16:49:11,297 INFO (DirectJDKLog.java:180)- Initializing Spring embedded WebApplicationContext
+2016-10-10 16:49:11,297 INFO (EmbeddedWebApplicationContext.java:271)- Root WebApplicationContext: initialization completed in 2866 ms
+2016-10-10 16:49:12,254 INFO (ServletRegistrationBean.java:189)- Mapping servlet: 'zuulServlet' to [/test]
+2016-10-10 16:49:12,257 INFO (ServletRegistrationBean.java:189)- Mapping servlet: 'dispatcherServlet' to [/]
+2016-10-10 16:49:12,263 INFO (FilterRegistrationBean.java:287)- Mapping filter: 'metricFilter' to: [/*]
+2016-10-10 16:49:12,264 INFO (FilterRegistrationBean.java:287)- Mapping filter: 'characterEncodingFilter' to: [/*]
+2016-10-10 16:49:12,264 INFO (FilterRegistrationBean.java:287)- Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2016-10-10 16:49:12,264 INFO (FilterRegistrationBean.java:287)- Mapping filter: 'webRequestLoggingFilter' to: [/*]
+2016-10-10 16:49:12,265 INFO (FilterRegistrationBean.java:300)- Mapping filter: 'contextLifecycleFilter' to urls: [/*]
+2016-10-10 16:49:12,265 INFO (FilterRegistrationBean.java:287)- Mapping filter: 'applicationContextIdFilter' to: [/*]
+2016-10-10 16:49:12,513 INFO (RequestMappingHandlerAdapter.java:517)- Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@59dd7c4b: startup date [Mon Oct 10 16:49:08 CST 2016]; parent: org.springframework.context.annotation.AnnotationConfigApplicationContext@472ae739
+2016-10-10 16:49:12,609 INFO (AbstractHandlerMethodMapping.java:218)- Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2016-10-10 16:49:12,610 INFO (AbstractHandlerMethodMapping.java:218)- Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2016-10-10 16:49:12,658 INFO (AbstractUrlHandlerMapping.java:314)- Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-10-10 16:49:12,658 INFO (AbstractUrlHandlerMapping.java:314)- Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-10-10 16:49:12,730 INFO (AbstractUrlHandlerMapping.java:314)- Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-10-10 16:49:12,885 INFO (MonitorRegistryMetricPoller.java:162)- cache refreshed, 0 monitors matched filter, previous age 1476089352 seconds
+2016-10-10 16:49:13,681 INFO (AbstractHandlerMethodMapping.java:218)- Mapped "{[/refresh],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2016-10-10 16:49:13,683 INFO (AbstractHandlerMethodMapping.java:218)- Mapped "{[/metrics/{name:.*}],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.MetricsMvcEndpoint.value(java.lang.String)
+2016-10-10 16:49:13,683 INFO (AbstractHandlerMethodMapping.java:218)- Mapped "{[/metrics],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-10-10 16:49:13,684 INFO (AbstractHandlerMethodMapping.java:218)- Mapped "{[/configprops],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-10-10 16:49:13,685 INFO (AbstractHandlerMethodMapping.java:218)- Mapped "{[/env/{name:.*}],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EnvironmentMvcEndpoint.value(java.lang.String)
+2016-10-10 16:49:13,686 INFO (AbstractHandlerMethodMapping.java:218)- Mapped "{[/env],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-10-10 16:49:13,687 INFO (AbstractHandlerMethodMapping.java:218)- Mapped "{[/health]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.HealthMvcEndpoint.invoke(java.security.Principal)
+2016-10-10 16:49:13,689 INFO (AbstractHandlerMethodMapping.java:218)- Mapped "{[/restart],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.restart.RestartMvcEndpoint.invoke()
+2016-10-10 16:49:13,690 INFO (AbstractHandlerMethodMapping.java:218)- Mapped "{[/info],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-10-10 16:49:13,691 INFO (AbstractHandlerMethodMapping.java:218)- Mapped "{[/archaius],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-10-10 16:49:13,691 INFO (AbstractHandlerMethodMapping.java:218)- Mapped "{[/autoconfig],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-10-10 16:49:13,692 INFO (AbstractHandlerMethodMapping.java:218)- Mapped "{[/dump],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-10-10 16:49:13,694 INFO (AbstractHandlerMethodMapping.java:218)- Mapped "{[/pause],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2016-10-10 16:49:13,696 INFO (AbstractHandlerMethodMapping.java:218)- Mapped "{[/env],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.value(java.util.Map<java.lang.String, java.lang.String>)
+2016-10-10 16:49:13,696 INFO (AbstractHandlerMethodMapping.java:218)- Mapped "{[/env/reset],methods=[POST]}" onto public java.util.Map<java.lang.String, java.lang.Object> org.springframework.cloud.context.environment.EnvironmentManagerMvcEndpoint.reset()
+2016-10-10 16:49:13,697 INFO (AbstractHandlerMethodMapping.java:218)- Mapped "{[/beans],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-10-10 16:49:13,698 INFO (AbstractHandlerMethodMapping.java:218)- Mapped "{[/mappings],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-10-10 16:49:13,699 INFO (AbstractHandlerMethodMapping.java:218)- Mapped "{[/trace],methods=[GET]}" onto public java.lang.Object org.springframework.boot.actuate.endpoint.mvc.EndpointMvcAdapter.invoke()
+2016-10-10 16:49:13,699 INFO (AbstractHandlerMethodMapping.java:218)- Mapped "{[/resume],methods=[POST]}" onto public java.lang.Object org.springframework.cloud.endpoint.GenericPostableMvcEndpoint.invoke()
+2016-10-10 16:49:14,398 WARN (URLConfigurationSource.java:120)- No URLs will be polled as dynamic configuration sources.
+2016-10-10 16:49:14,399 INFO (URLConfigurationSource.java:121)- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2016-10-10 16:49:14,414 WARN (URLConfigurationSource.java:120)- No URLs will be polled as dynamic configuration sources.
+2016-10-10 16:49:14,415 INFO (URLConfigurationSource.java:121)- To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2016-10-10 16:49:14,462 INFO (MBeanExporter.java:431)- Registering beans for JMX exposure on startup
+2016-10-10 16:49:14,479 INFO (MBeanExporter.java:912)- Bean with name 'refreshEndpoint' has been autodetected for JMX exposure
+2016-10-10 16:49:14,480 INFO (MBeanExporter.java:912)- Bean with name 'restartEndpoint' has been autodetected for JMX exposure
+2016-10-10 16:49:14,481 INFO (MBeanExporter.java:912)- Bean with name 'configurationPropertiesRebinder' has been autodetected for JMX exposure
+2016-10-10 16:49:14,482 INFO (MBeanExporter.java:912)- Bean with name 'refreshScope' has been autodetected for JMX exposure
+2016-10-10 16:49:14,483 INFO (MBeanExporter.java:912)- Bean with name 'environmentManager' has been autodetected for JMX exposure
+2016-10-10 16:49:14,487 INFO (MBeanExporter.java:674)- Located managed bean 'environmentManager': registering with JMX server as MBean [org.springframework.cloud.context.environment:name=environmentManager,type=EnvironmentManager]
+2016-10-10 16:49:14,509 INFO (MBeanExporter.java:674)- Located managed bean 'refreshScope': registering with JMX server as MBean [org.springframework.cloud.context.scope.refresh:name=refreshScope,type=RefreshScope]
+2016-10-10 16:49:14,523 INFO (MBeanExporter.java:674)- Located managed bean 'restartEndpoint': registering with JMX server as MBean [org.springframework.cloud.context.restart:name=restartEndpoint,type=RestartEndpoint]
+2016-10-10 16:49:14,542 INFO (MBeanExporter.java:674)- Located managed bean 'configurationPropertiesRebinder': registering with JMX server as MBean [org.springframework.cloud.context.properties:name=configurationPropertiesRebinder,context=59dd7c4b,type=ConfigurationPropertiesRebinder]
+2016-10-10 16:49:14,558 INFO (MBeanExporter.java:674)- Located managed bean 'refreshEndpoint': registering with JMX server as MBean [org.springframework.cloud.bootstrap.config:name=refreshEndpoint,type=RefreshEndpoint]
+2016-10-10 16:49:14,563 INFO (MBeanExporter.java:431)- Registering beans for JMX exposure on startup
+2016-10-10 16:49:14,567 INFO (DefaultLifecycleProcessor.java:341)- Starting beans in phase 0
+2016-10-10 16:49:14,570 INFO (MBeanExporter.java:674)- Located managed bean 'requestMappingEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=requestMappingEndpoint]
+2016-10-10 16:49:14,587 INFO (MBeanExporter.java:674)- Located managed bean 'environmentEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=environmentEndpoint]
+2016-10-10 16:49:14,595 INFO (MBeanExporter.java:674)- Located managed bean 'healthEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=healthEndpoint]
+2016-10-10 16:49:14,603 INFO (MBeanExporter.java:674)- Located managed bean 'beansEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=beansEndpoint]
+2016-10-10 16:49:14,613 INFO (MBeanExporter.java:674)- Located managed bean 'infoEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=infoEndpoint]
+2016-10-10 16:49:14,623 INFO (MBeanExporter.java:674)- Located managed bean 'metricsEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=metricsEndpoint]
+2016-10-10 16:49:14,632 INFO (MBeanExporter.java:674)- Located managed bean 'traceEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=traceEndpoint]
+2016-10-10 16:49:14,641 INFO (MBeanExporter.java:674)- Located managed bean 'dumpEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=dumpEndpoint]
+2016-10-10 16:49:14,652 INFO (MBeanExporter.java:674)- Located managed bean 'autoConfigurationAuditEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=autoConfigurationAuditEndpoint]
+2016-10-10 16:49:14,662 INFO (MBeanExporter.java:674)- Located managed bean 'configurationPropertiesReportEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=configurationPropertiesReportEndpoint]
+2016-10-10 16:49:14,674 INFO (MBeanExporter.java:674)- Located managed bean 'archaiusEndpoint': registering with JMX server as MBean [org.springframework.boot:type=Endpoint,name=archaiusEndpoint]
+2016-10-10 16:49:14,780 INFO (DirectJDKLog.java:180)- Initializing ProtocolHandler ["http-nio-8080"]
+2016-10-10 16:49:14,788 INFO (DirectJDKLog.java:180)- Starting ProtocolHandler ["http-nio-8080"]
+2016-10-10 16:49:14,808 INFO (DirectJDKLog.java:180)- Using a shared selector for servlet write/read
+2016-10-10 16:49:14,847 INFO (TomcatEmbeddedServletContainer.java:160)- Tomcat started on port(s): 8080 (http)
+2016-10-10 16:49:14,853 INFO (Application.java:56)- =======注册过滤器能够=======
+2016-10-10 16:49:14,862 INFO (StartupInfoLogger.java:57)- Started Application in 7.849 seconds (JVM running for 8.528)
+2016-10-10 16:49:14,862 INFO (Application.java:37)- =======成功启动Spring boot=======
+2016-10-10 16:49:17,887 INFO (MonitorRegistryMetricPoller.java:162)- cache refreshed, 0 monitors matched filter, previous age 5 seconds
+2016-10-10 16:49:22,889 INFO (MonitorRegistryMetricPoller.java:162)- cache refreshed, 0 monitors matched filter, previous age 5 seconds
+2016-10-10 16:49:27,892 INFO (MonitorRegistryMetricPoller.java:162)- cache refreshed, 0 monitors matched filter, previous age 5 seconds
