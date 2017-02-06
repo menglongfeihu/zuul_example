@@ -5,15 +5,12 @@ package com.sohu.tv.api.gateway;
 
 import java.io.IOException;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.embedded.FilterRegistrationBean;
 import org.springframework.boot.context.embedded.ServletRegistrationBean;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Component;
 
 import com.netflix.zuul.FilterFileManager;
 import com.netflix.zuul.FilterLoader;
@@ -28,21 +25,21 @@ import com.netflix.zuul.groovy.GroovyFileFilter;
 import com.netflix.zuul.http.ZuulServlet;
 import com.netflix.zuul.monitoring.MonitoringHelper;
 
-@SpringBootApplication
+//@SpringBootApplication
 public class Application {
 
-    private  final static Logger LOGGER = LoggerFactory.getLogger(Application.class);
+    protected static final Log logger = LogFactory.getLog(Application.class);
 
     public static void main(String[] args) {
-        LOGGER.info("=======开始启动Spring boot=======");
+        logger.info("=======开始启动Spring boot=======");
         new SpringApplicationBuilder(Application.class).web(true).run(args);
         /*.listeners(new MyApplicationEnvironmentPreparedEventListener())
         .listeners(new MyApplicationPreparedEventListener())
         .listeners(new MyApplicationStartedEventListener()).run(args);*/
-        LOGGER.info("=======成功启动Spring boot=======");
+        logger.info("=======成功启动Spring boot=======");
     }
 
-    @Component
+    //@Component
     public static class MyCommandLineRunner implements CommandLineRunner {
         @Override
         public void run(String... args) throws Exception {
@@ -59,16 +56,16 @@ public class Application {
         }
 
         private void initJavaFilters() {
-            LOGGER.info("=======注册过滤器=======");
+            logger.info("=======注册过滤器=======");
             final FilterRegistry registry = FilterRegistry.instance();
 
             registry.put("staticFilter", new StaticResponseFilter() {
 
                 @Override
                 public Object uri() {
-                    LOGGER.info("=======staticFilter=======");
+                    logger.info("=======staticFilter=======");
                     String path = RequestContext.getCurrentContext().getRequest().getRequestURI();
-                    LOGGER.info("path" + path);
+                    logger.info("path" + path);
                     return "/static";
                 }
 
@@ -115,7 +112,7 @@ public class Application {
 
                 @Override
                 public Object run() {
-                    LOGGER.info("running javaPreFilter");
+                    logger.info("running javaPreFilter");
 
                     RequestContext.getCurrentContext().set("name", "liaokailin");
                     return null;
@@ -144,7 +141,7 @@ public class Application {
 
                 @Override
                 public Object run() {
-                    LOGGER.info("running javaRoutingFilter");
+                    logger.info("running javaRoutingFilter");
                     try {
                         RequestContext.getCurrentContext().getResponse().sendRedirect("http://blog.csdn.net/liaokailin/");
                     } catch (IOException e) {
@@ -176,8 +173,8 @@ public class Application {
 
                 @Override
                 public Object run() {
-                    LOGGER.info("running javaPostFilter");
-                    LOGGER.info(RequestContext.getCurrentContext().get("name").toString());
+                    logger.info("running javaPostFilter");
+                    logger.info(RequestContext.getCurrentContext().get("name").toString());
                     return null;
                 }
                 @Override
@@ -190,7 +187,7 @@ public class Application {
 
     }
 
-    @Bean
+    //@Bean
     public ServletRegistrationBean zuulServlet() {
         ServletRegistrationBean servlet = new ServletRegistrationBean(new ZuulServlet());
         servlet.addUrlMappings("/test");
@@ -198,7 +195,7 @@ public class Application {
         return servlet;
     }
 
-    @Bean
+    //@Bean
     public FilterRegistrationBean contextLifecycleFilter() {
         FilterRegistrationBean filter = new FilterRegistrationBean(new ContextLifecycleFilter());
         filter.addUrlPatterns("/*");
