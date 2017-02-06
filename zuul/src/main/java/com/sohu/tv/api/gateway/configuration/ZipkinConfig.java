@@ -14,6 +14,7 @@ import com.github.kristofa.brave.Sampler;
 import com.github.kristofa.brave.SpanCollector;
 import com.github.kristofa.brave.http.DefaultSpanNameProvider;
 import com.github.kristofa.brave.http.HttpSpanCollector;
+import com.github.kristofa.brave.mysql.MySQLStatementInterceptorManagementBean;
 import com.github.kristofa.brave.okhttp.BraveOkHttpRequestResponseInterceptor;
 import com.github.kristofa.brave.servlet.BraveServletFilter;
 
@@ -46,6 +47,11 @@ public class ZipkinConfig {
          */
         return new BraveServletFilter(brave.serverRequestInterceptor(), brave.serverResponseInterceptor(),
                 new DefaultSpanNameProvider());
+    }
+
+    @Bean
+    public MySQLStatementInterceptorManagementBean mySQLStatementInterceptorManagementBean(Brave brave) {
+        return new MySQLStatementInterceptorManagementBean(brave.clientTracer());
     }
 
     @Bean

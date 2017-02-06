@@ -72,7 +72,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.5</version><!--$NO-MVN-MAN-VER$ -->
+			<version>5.1.38</version><!--$NO-MVN-MAN-VER$ -->
 		</dependency>
 		<!-- 添加redis缓存 -->
 		<dependency>
@@ -90,10 +90,10 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 		</dependency>
 		<!-- 添加shell 登录 -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-remote-shell</artifactId>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>org.jolokia</groupId>
 			<artifactId>jolokia-core</artifactId>
@@ -155,7 +155,11 @@
 			<artifactId>brave-okhttp</artifactId>
 			<version>3.9.0</version>
 		</dependency>
-
+		<dependency>
+			<groupId>io.zipkin.brave</groupId>
+			<artifactId>brave-mysql</artifactId>
+			<version>3.9.0</version>
+		</dependency>
 		<dependency>
 			<groupId>io.swagger</groupId>
 			<artifactId>swagger-jaxrs</artifactId>
