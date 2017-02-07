@@ -5,6 +5,7 @@ package com.sohu.tv.api.gateway.configuration;
 
 import okhttp3.OkHttpClient;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -21,22 +22,26 @@ import com.github.kristofa.brave.servlet.BraveServletFilter;
 @Configuration
 public class ZipkinConfig {
 
+    @Autowired
+    ZipkinProperties properties;
+
+
     @Bean
     public SpanCollector spanCollector() {
         HttpSpanCollector.Config spanConfig = HttpSpanCollector.Config.builder()
-                .compressionEnabled(false)// 默认false，span在transport之前是否会被gzipped。
-                .connectTimeout(5000)// 5s，默认10s
-                .flushInterval(1)
-                .readTimeout(6000)// 5s，默认60s
+                .compressionEnabled(properties.isCompressionEnabled())// 默认false，span在transport之前是否会被gzipped。
+                .connectTimeout(properties.getConnectTimeout())// 5s，默认10s
+                .flushInterval(properties.getFlushInterval())
+                .readTimeout(properties.getReadTimeout())// 5s，默认60s
                 .build();
-        return HttpSpanCollector.create("http://localhost:9411", spanConfig, new EmptySpanCollectorMetricsHandler());
+        return HttpSpanCollector.create(properties.getUrl(), spanConfig, new EmptySpanCollectorMetricsHandler());
     }
 
     @Bean
     public Brave brave(SpanCollector spanCollector) {
-        Brave.Builder builder = new Brave.Builder("service1");
+        Brave.Builder builder = new Brave.Builder(properties.getServiceName());
         builder.spanCollector(spanCollector);
-        builder.traceSampler(Sampler.create(1));// 采集率
+        builder.traceSampler(Sampler.create(properties.getTraceSample()));// 采集率
         return builder.build();
     }
 
